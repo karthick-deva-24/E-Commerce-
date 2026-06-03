@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Stackly Store</title>
+  <meta name="description" content="The requested page could not be located in the Stackly database.">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-family/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .error-wrapper {
+      min-height: calc(100vh - var(--nav-height) - 300px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .error-card {
+      text-align: center;
+      max-width: 600px;
+      padding: 60px 40px;
+      border-radius: 24px;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both, floatCard 6s ease-in-out infinite 0.8s;
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .error-card:hover {
+      box-shadow: 0 30px 60px -20px rgba(79, 70, 229, 0.2), 0 0 50px -10px rgba(192, 132, 252, 0.15);
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      line-height: 1;
+      font-family: var(--font-display);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      letter-spacing: -2px;
+      animation: textPulse 3s ease-in-out infinite alternate;
+    }
+    
+    .error-title {
+      font-size: 2.2rem;
+      font-family: var(--font-display);
+      color: var(--text-main);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .error-desc {
+      color: var(--text-muted);
+      margin-bottom: 35px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes floatCard {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    
+    @keyframes textPulse {
+      0% {
+        filter: drop-shadow(0 5px 10px rgba(79, 70, 229, 0.2)) drop-shadow(0 0 10px rgba(192, 132, 252, 0.1));
+      }
+      100% {
+        filter: drop-shadow(0 15px 30px rgba(79, 70, 229, 0.45)) drop-shadow(0 0 25px rgba(192, 132, 252, 0.35));
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .error-code {
+        font-size: 6rem;
+      }
+      .error-title {
+        font-size: 1.8rem;
+      }
+      .error-card {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body class="preloader-active">
+
+  <!-- preloader -->
+  <div class="preloader" id="page-preloader">
+    <div class="preloader-panel preloader-panel-left"></div>
+    <div class="preloader-panel preloader-panel-right"></div>
+    <div class="preloader-content" id="preloader-text-area">
+      <div class="loader-container">
+        <div class="loader-ring"></div>
+        <div class="loader-ring-inner"></div>
+        <img src="assets/images/stackly_symbol.png" class="loader-icon" alt="Stackly Logo" style="width: 45px; height: auto;">
+      </div>
+      <div class="loader-text">STACKLY</div>
+    </div>
+  </div>
+
+  <!-- Background Orbs -->
+  <div class="bg-glow-orb glow-purple" style="top: 15%; left: 15%;"></div>
+  <div class="bg-glow-orb glow-blue" style="bottom: 15%; right: 15%;"></div>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar-container scrolled" id="main-header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" id="logo-home">
+        <img src="assets/images/stackly_logo.png" class="stackly-logo" alt="Stackly Logo">
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <input type="text" placeholder="Search premium essentials..." class="nav-search-input" id="search-input">
+        <button class="nav-search-btn" id="search-submit" aria-label="Search button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link" id="link-home">Home</a></li>
+        <li><a href="404.html" class="nav-link" id="link-about">About</a></li>
+        <li><a href="404.html" class="nav-link" id="link-services">Services</a></li>
+        <li><a href="404.html" class="nav-link" id="link-contact">Contact</a></li>
+        </ul>
+
+      <!-- Action Elements -->
+      <div class="nav-actions">
+        <!-- Cart Trigger -->
+        <button class="cart-icon-btn" id="cart-drawer-trigger" aria-label="Open shopping cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+        <!-- Login Button -->
+        <a href="404.html" class="btn-login" id="nav-login-btn">
+          <i class="fa-regular fa-user"></i> Login
+        </a>
+        <!-- Mobile Toggle -->
+        <i class="fa-solid fa-bars mobile-menu-btn" id="mobile-menu-toggle"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       SLIDE-OUT CART DRAWER
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer-panel">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping" style="color: var(--color-primary);"></i> Your Stackly Cart</h3>
+      <button class="cart-close-btn" id="cart-drawer-close" aria-label="Close cart drawer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-items-container" id="cart-items-list">
+      <div class="cart-empty-message" id="cart-empty-prompt">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <p>Your shopping cart is empty.</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="cart-checkout-btn" id="checkout-action-btn">
+        <i class="fa-solid fa-circle-check"></i> Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       404 ERROR MAIN CONTAINER
+       ========================================== -->
+  <main class="error-wrapper">
+    <div class="error-card glass-premium">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Telemetry Signal Lost</h1>
+      <p class="error-desc">The requested resource has migrated, offline, or does not exist in our central Stackly data node.</p>
+      <div class="error-actions">
+        <button class="btn-primary" onclick="window.history.back();">
+          <i class="fa-solid fa-arrow-left"></i> Back to Previous Page
+        </button>
+        <a href="index.html" class="btn-outline">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- App Main Logic Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

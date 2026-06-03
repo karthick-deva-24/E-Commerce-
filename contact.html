@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Hub - Stackly Store</title>
+  <meta name="description" content="Connect with Stackly support, engineering specialists, and product development nodes.">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="preloader-active">
+
+  <!-- preloader -->
+  <div class="preloader" id="page-preloader">
+    <div class="preloader-panel preloader-panel-left"></div>
+    <div class="preloader-panel preloader-panel-right"></div>
+    <div class="preloader-content" id="preloader-text-area">
+      <div class="loader-container">
+        <div class="loader-ring"></div>
+        <div class="loader-ring-inner"></div>
+        <img src="assets/images/stackly_symbol.png" class="loader-icon" alt="Stackly Logo" style="width: 45px; height: auto;">
+      </div>
+      <div class="loader-text">STACKLY</div>
+    </div>
+  </div>
+
+  <!-- Background Orbs -->
+  <div class="bg-glow-orb glow-purple" style="top: 10%; left: 10%;"></div>
+  <div class="bg-glow-orb glow-blue" style="top: 40%; right: 5%;"></div>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar-container scrolled" id="main-header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" id="logo-home">
+        <img src="assets/images/stackly_logo.png" class="stackly-logo" alt="Stackly Logo">
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <input type="text" placeholder="Search premium essentials..." class="nav-search-input" id="search-input">
+        <button class="nav-search-btn" id="search-submit" aria-label="Search button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link" id="link-home">Home</a></li>
+        <li><a href="404.html" class="nav-link" id="link-about">About</a></li>
+        <li><a href="404.html" class="nav-link" id="link-services">Services</a></li>
+        <li><a href="404.html" class="nav-link active" id="link-contact">Contact</a></li>
+        </ul>
+
+      <!-- Action Elements -->
+      <div class="nav-actions">
+        <!-- Cart Trigger -->
+        <button class="cart-icon-btn" id="cart-drawer-trigger" aria-label="Open shopping cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+        <!-- Login Button -->
+        <a href="404.html" class="btn-login" id="nav-login-btn">
+          <i class="fa-regular fa-user"></i> Login
+        </a>
+        <!-- Mobile Toggle -->
+        <i class="fa-solid fa-bars mobile-menu-btn" id="mobile-menu-toggle"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       SLIDE-OUT CART DRAWER
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer-panel">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping" style="color: var(--color-primary);"></i> Your Stackly Cart</h3>
+      <button class="cart-close-btn" id="cart-drawer-close" aria-label="Close cart drawer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-items-container" id="cart-items-list">
+      <div class="cart-empty-message" id="cart-empty-prompt">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <p>Your shopping cart is empty.</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="cart-checkout-btn" id="checkout-action-btn">
+        <i class="fa-solid fa-circle-check"></i> Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       MAIN CONTENTS
+       ========================================== -->
+  <main>
+    <section class="inner-page-hero">
+      <div class="section-container">
+        <h1 class="inner-page-title">Contact <span>Hub</span></h1>
+        <div class="inner-page-breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Contact Hub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Empty Content Area as requested -->
+    <div class="inner-page-content">
+      <div class="section-container" style="text-align: center; color: var(--text-muted);">
+        <p>This section is intentionally left blank. Browse our homepage for all collections and hardware deals.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-logo-area">
+          <div class="footer-logo">
+            <img src="assets/images/stackly_logo.png" class="stackly-logo" alt="Stackly Logo">
+          </div>
+          <p class="footer-desc">Providing premium sensory-enhancing hardware and futuristic devices for refined tech environments.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-link" aria-label="Stackly on Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Stackly on Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="404.html" class="social-link" aria-label="Stackly on Github"><i class="fa-brands fa-github"></i></a>
+            <a href="404.html" class="social-link" aria-label="Stackly on Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <div class="footer-links">
+            <a href="index.html#section-categories">Smart Gear</a>
+            <a href="index.html#section-categories">Acoustics</a>
+            <a href="index.html#section-categories">Wearables</a>
+            <a href="index.html#section-categories">Automation</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <div class="footer-links">
+            <a href="404.html">About Us</a>
+            <a href="404.html">Services</a>
+            <a href="404.html">Contact Hub</a>
+            <a href="404.html">Security Protocol</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Assistance</h5>
+          <div class="footer-links">
+            <a href="404.html">Support Hub</a>
+            <a href="404.html">Hardware Return</a>
+            <a href="404.html">Latency Sync</a>
+            <a href="404.html">FAQ Gateway</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY Inc. All rights reserved. Designed for the futuristic tech space.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Protocol</a>
+          <a href="404.html">Terms of Access</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Main Logic Script -->
+  <script src="js/app.js"></script>
+  </div>
+
+</body>
+</html>

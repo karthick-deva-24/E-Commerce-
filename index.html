@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Store - Premium E-commerce Experience</title>
+  <meta name="description" content="Experience premium shopping at Stackly, a futuristic glassmorphic e-commerce destination for high-end smart gear, luxury audio, and automated lifestyle products.">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="preloader-active">
+
+  <!-- ==========================================
+       UNIQUE PRELOADER
+       ========================================== -->
+  <div class="preloader" id="page-preloader">
+    <div class="preloader-panel preloader-panel-left"></div>
+    <div class="preloader-panel preloader-panel-right"></div>
+    <div class="preloader-content" id="preloader-text-area">
+      <div class="loader-container">
+        <div class="loader-ring"></div>
+        <div class="loader-ring-inner"></div>
+        <img src="assets/images/stackly_symbol.png" class="loader-icon" alt="Stackly Logo" style="width: 45px; height: auto;">
+      </div>
+      <div class="loader-text">STACKLY</div>
+    </div>
+  </div>
+
+  <!-- Background Orbs -->
+  <div class="bg-glow-orb glow-purple" style="top: 10%; left: 10%;"></div>
+  <div class="bg-glow-orb glow-blue" style="top: 40%; right: 5%;"></div>
+  <div class="bg-glow-orb glow-purple" style="top: 70%; left: 20%;"></div>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar-container" id="main-header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" id="logo-home">
+        <img src="assets/images/stackly_logo.png" class="stackly-logo" alt="Stackly Logo">
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <input type="text" placeholder="Search premium essentials..." class="nav-search-input" id="search-input">
+        <button class="nav-search-btn" id="search-submit" aria-label="Search button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active" id="link-home">Home</a></li>
+        <li><a href="404.html" class="nav-link" id="link-about">About</a></li>
+        <li><a href="404.html" class="nav-link" id="link-services">Services</a></li>
+        <li><a href="404.html" class="nav-link" id="link-contact">Contact</a></li>
+        </ul>
+
+      <!-- Action Elements -->
+      <div class="nav-actions">
+        <!-- Cart Trigger -->
+        <button class="cart-icon-btn" id="cart-drawer-trigger" aria-label="Open shopping cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+        <!-- Login Button -->
+        <a href="404.html" class="btn-login" id="nav-login-btn">
+          <i class="fa-regular fa-user"></i> Login
+        </a>
+        <!-- Mobile Toggle -->
+        <i class="fa-solid fa-bars mobile-menu-btn" id="mobile-menu-toggle"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       SLIDE-OUT CART DRAWER
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer-panel">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping" style="color: var(--color-primary);"></i> Your Stackly Cart</h3>
+      <button class="cart-close-btn" id="cart-drawer-close" aria-label="Close cart drawer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    
+    <!-- Dynamic Cart Items Container -->
+    <div class="cart-items-container" id="cart-items-list">
+      <!-- Empty Message Default -->
+      <div class="cart-empty-message" id="cart-empty-prompt">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <p>Your shopping cart is empty.</p>
+        <p style="font-size: 0.85rem;">Discover premium tech items to fill it up.</p>
+      </div>
+    </div>
+    
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="cart-checkout-btn" id="checkout-action-btn">
+        <i class="fa-solid fa-circle-check"></i> Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       MAIN HOMEPAGE CONTENTS (9 SECTIONS)
+       ========================================== -->
+  <main>
+    
+    <!-- SECTION 1: HERO BANNER -->
+    <section class="hero" id="section-hero">
+      <div class="section-container hero-grid">
+        <div class="hero-content">
+          <span class="hero-badge glass">
+            <i class="fa-solid fa-bolt" style="color: var(--color-accent);"></i> Launch Special Edition
+          </span>
+          <h1 class="hero-title">Experience the<br><span>Next Era</span> of Tech</h1>
+          <p class="hero-description">Discover curated luxury wearables, sensory-enhancing acoustics, and intelligent automated home systems designed for tomorrow.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" id="hero-cta-shop" onclick="window.location.href='404.html';">
+              Shop Now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn-outline" id="hero-cta-explore" onclick="window.location.href='404.html';">
+              Explore Tech
+            </button>
+          </div>
+        </div>
+        <div class="hero-image-area">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero_product.png" alt="Stackly Holographic Smart Device" id="hero-banner-image">
+          </div>
+          <!-- Floating glass dynamic badges -->
+          <div class="floating-badge floating-badge-1 glass">
+            <div class="floating-badge-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="floating-badge-text">
+              <p>A16 Quantum Chip</p>
+              <p>Optimum Efficiency</p>
+            </div>
+          </div>
+          <div class="floating-badge floating-badge-2 glass">
+            <div class="floating-badge-icon" style="background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));">
+              <i class="fa-solid fa-circle-nodes"></i>
+            </div>
+            <div class="floating-badge-text">
+              <p>Connectivity</p>
+              <p>Zero-Latency Sync</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CURATED COLLECTIONS (5 CATEGORIES) -->
+    <section class="categories" id="section-categories" style="border-top: 1px solid var(--border-color);">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Curated <span>Collections</span></h2>
+            <p class="section-subtitle">Specially tailored product clusters designed to elevate specific sensory environments.</p>
+          </div>
+        </div>
+        <div class="categories-grid">
+          <!-- Mobiles -->
+          <div class="category-card glass" id="cat-card-mobiles" onclick="document.getElementById('section-new-arrivals').scrollIntoView(); filterArrivals('mobiles')">
+            <img src="assets/images/hero_product.png" alt="Mobiles Category" class="category-card-bg">
+            <div class="category-info">
+              <span class="category-count">14 Items</span>
+              <h3 class="category-name">Mobiles</h3>
+              <a href="#section-new-arrivals" class="category-btn">
+                Explore Cluster <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Headphones -->
+          <div class="category-card glass" id="cat-card-headphones" onclick="document.getElementById('section-new-arrivals').scrollIntoView(); filterArrivals('headphones')">
+            <img src="assets/images/headphones_product.png" alt="Headphones Category" class="category-card-bg">
+            <div class="category-info">
+              <span class="category-count">10 Items</span>
+              <h3 class="category-name">Headphones</h3>
+              <a href="#section-new-arrivals" class="category-btn">
+                Explore Cluster <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Laptops -->
+          <div class="category-card glass" id="cat-card-laptops" onclick="document.getElementById('section-new-arrivals').scrollIntoView(); filterArrivals('laptops')">
+            <img src="assets/images/laptop_product.png" alt="Laptops Category" class="category-card-bg">
+            <div class="category-info">
+              <span class="category-count">6 Items</span>
+              <h3 class="category-name">Laptops</h3>
+              <a href="#section-new-arrivals" class="category-btn">
+                Explore Cluster <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Watches -->
+          <div class="category-card glass" id="cat-card-watches" onclick="document.getElementById('section-new-arrivals').scrollIntoView(); filterArrivals('watches')">
+            <img src="assets/images/smartwatch_product.png" alt="Watches Category" class="category-card-bg">
+            <div class="category-info">
+              <span class="category-count">12 Items</span>
+              <h3 class="category-name">Watches</h3>
+              <a href="#section-new-arrivals" class="category-btn">
+                Explore Cluster <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Home Appliances -->
+          <div class="category-card glass" id="cat-card-appliances" onclick="document.getElementById('section-new-arrivals').scrollIntoView(); filterArrivals('appliances')">
+            <img src="assets/images/appliance_product.png" alt="Home Appliances Category" class="category-card-bg">
+            <div class="category-info">
+              <span class="category-count">15 Items</span>
+              <h3 class="category-name">Appliances</h3>
+              <a href="#section-new-arrivals" class="category-btn">
+                Explore Cluster <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FLASH DEALS -->
+    <section class="deals" id="section-flash-deals">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Flash <span>Deals</span></h2>
+            <p class="section-subtitle">Limited quantities remaining of our premium selected tech lines. Act swift.</p>
+          </div>
+          <div class="countdown-wrapper">
+            <span class="countdown-label">Ends In:</span>
+            <div class="countdown-timer">
+              <div class="countdown-box" id="deal-hours">02</div>
+              <div class="countdown-box" id="deal-minutes">48</div>
+              <div class="countdown-box" id="deal-seconds">59</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="deals-grid">
+          <!-- Deal 1 -->
+          <div class="deal-card glass" id="deal-1">
+            <span class="deal-badge">-25%</span>
+            <div class="deal-img-wrapper">
+              <img src="assets/images/smartwatch_product.png" alt="Stackly Chrono Smartwatch">
+            </div>
+            <div class="deal-info">
+              <h3 class="deal-title">Stackly Chrono V2</h3>
+              <div class="deal-price-area">
+                <span class="deal-price-current">$299.00</span>
+                <span class="deal-price-old">$399.00</span>
+              </div>
+              <div class="deal-stock">
+                <div class="deal-stock-text">
+                  <span>Stock Left</span>
+                  <span>4 Left</span>
+                </div>
+                <div class="deal-stock-bar">
+                  <div class="deal-stock-progress" style="width: 25%;"></div>
+                </div>
+              </div>
+              <button class="deal-btn" id="deal-add-1" onclick="window.location.href='404.html';">
+                <i class="fa-solid fa-cart-plus"></i> Claim Deal
+              </button>
+            </div>
+          </div>
+
+          <!-- Deal 2 -->
+          <div class="deal-card glass" id="deal-2">
+            <span class="deal-badge">-40%</span>
+            <div class="deal-img-wrapper">
+              <img src="assets/images/headphones_product.png" alt="Stackly Acoustic Headphones">
+            </div>
+            <div class="deal-info">
+              <h3 class="deal-title">Stackly H-1 Audio</h3>
+              <div class="deal-price-area">
+                <span class="deal-price-current">$179.00</span>
+                <span class="deal-price-old">$299.00</span>
+              </div>
+              <div class="deal-stock">
+                <div class="deal-stock-text">
+                  <span>Stock Left</span>
+                  <span>7 Left</span>
+                </div>
+                <div class="deal-stock-bar">
+                  <div class="deal-stock-progress" style="width: 45%;"></div>
+                </div>
+              </div>
+              <button class="deal-btn" id="deal-add-2" onclick="window.location.href='404.html';">
+                <i class="fa-solid fa-cart-plus"></i> Claim Deal
+              </button>
+            </div>
+          </div>
+
+          <!-- Deal 3 -->
+          <div class="deal-card glass" id="deal-3">
+            <span class="deal-badge">-15%</span>
+            <div class="deal-img-wrapper">
+              <img src="assets/images/appliance_product.png" alt="Stackly air purifier">
+            </div>
+            <div class="deal-info">
+              <h3 class="deal-title">Stackly Purify Air</h3>
+              <div class="deal-price-area">
+                <span class="deal-price-current">$249.00</span>
+                <span class="deal-price-old">$299.00</span>
+              </div>
+              <div class="deal-stock">
+                <div class="deal-stock-text">
+                  <span>Stock Left</span>
+                  <span>14 Left</span>
+                </div>
+                <div class="deal-stock-bar">
+                  <div class="deal-stock-progress" style="width: 70%;"></div>
+                </div>
+              </div>
+              <button class="deal-btn" id="deal-add-3" onclick="window.location.href='404.html';">
+                <i class="fa-solid fa-cart-plus"></i> Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BEST SELLERS -->
+    <section class="best-sellers" id="section-best-sellers" style="border-top: 1px solid var(--border-color);">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Best <span>Sellers</span></h2>
+            <p class="section-subtitle">Our global userbase's highest rated and frequently acquired luxury products.</p>
+          </div>
+        </div>
+        
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card glass" id="prod-best-1">
+            <div class="product-badge">
+              <span class="tag-hot">Hot</span>
+            </div>
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/hero_product.png" alt="Stackly Nova Pro" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Mobiles</span>
+                <h3 class="product-title">Stackly Nova Pro</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(104)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$1099.00</span>
+                  <button class="product-add-btn" id="best-add-1" onclick="window.location.href='404.html';" aria-label="Add Stackly Nova Pro to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card glass" id="prod-best-2">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/laptop_product.png" alt="Stackly Book Pro 14" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Laptops</span>
+                <h3 class="product-title">Stackly Book Pro 14</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span class="product-rating-count">(82)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$1299.00</span>
+                  <button class="product-add-btn" id="best-add-2" onclick="window.location.href='404.html';" aria-label="Add Stackly Book Pro 14 to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card glass" id="prod-best-3">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/smartwatch_product.png" alt="Stackly Chrono Smart Watch" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Watches</span>
+                <h3 class="product-title">Stackly Chrono V2</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span class="product-rating-count">(61)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$299.00</span>
+                  <button class="product-add-btn" id="best-add-3" onclick="window.location.href='404.html';" aria-label="Add Stackly Chrono V2 to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card glass" id="prod-best-4">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/appliance_product.png" alt="Stackly air purifier" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Appliances</span>
+                <h3 class="product-title">Stackly Purify Air</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(212)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$249.00</span>
+                  <button class="product-add-btn" id="best-add-4" onclick="window.location.href='404.html';" aria-label="Add Stackly Purify Air to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: BRAND SHOWCASE -->
+    <section class="brands" id="section-brands">
+      <div class="brands-container">
+        <div class="brands-track">
+          <div class="brand-logo"><i class="fa-solid fa-cubes"></i> NEXUS</div>
+          <div class="brand-logo"><i class="fa-solid fa-wave-square"></i> PULSE</div>
+          <div class="brand-logo"><i class="fa-solid fa-atom"></i> ORBIT</div>
+          <div class="brand-logo"><i class="fa-solid fa-terminal"></i> APEX</div>
+          <div class="brand-logo"><i class="fa-solid fa-meteor"></i> ECLIPSE</div>
+          <div class="brand-logo"><i class="fa-solid fa-bolt-lightning"></i> VELOCE</div>
+          <!-- Duplicate for seamless loop -->
+          <div class="brand-logo"><i class="fa-solid fa-cubes"></i> NEXUS</div>
+          <div class="brand-logo"><i class="fa-solid fa-wave-square"></i> PULSE</div>
+          <div class="brand-logo"><i class="fa-solid fa-atom"></i> ORBIT</div>
+          <div class="brand-logo"><i class="fa-solid fa-terminal"></i> APEX</div>
+          <div class="brand-logo"><i class="fa-solid fa-meteor"></i> ECLIPSE</div>
+          <div class="brand-logo"><i class="fa-solid fa-bolt-lightning"></i> VELOCE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: NEW ARRIVALS (CATEGORIZED GRID) -->
+    <section class="arrivals" id="section-new-arrivals">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">New <span>Arrivals</span></h2>
+            <p class="section-subtitle">Freshly integrated products into our futuristic tech ecosystem.</p>
+          </div>
+          <div class="arrivals-nav" id="arrivals-filter-tabs">
+            <button class="filter-tab active" id="tab-all" onclick="filterArrivals('all')">All Tech</button>
+            <button class="filter-tab" id="tab-mobiles" onclick="filterArrivals('mobiles')">Mobiles</button>
+            <button class="filter-tab" id="tab-headphones" onclick="filterArrivals('headphones')">Headphones</button>
+            <button class="filter-tab" id="tab-laptops" onclick="filterArrivals('laptops')">Laptops</button>
+            <button class="filter-tab" id="tab-watches" onclick="filterArrivals('watches')">Watches</button>
+            <button class="filter-tab" id="tab-appliances" onclick="filterArrivals('appliances')">Appliances</button>
+          </div>
+        </div>
+
+        <div class="arrivals-grid" id="arrivals-product-container">
+          <!-- Item 1 (Mobiles) -->
+          <div class="product-card glass arrival-item" data-category="mobiles" id="prod-arr-1">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/hero_product.png" alt="Stackly Nova Lite" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Mobiles</span>
+                <h3 class="product-title">Stackly Nova Lite</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span class="product-rating-count">(91)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$699.00</span>
+                  <button class="product-add-btn" id="arr-add-1" onclick="window.location.href='404.html';" aria-label="Add Stackly Nova Lite to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 (Headphones) -->
+          <div class="product-card glass arrival-item" data-category="headphones" id="prod-arr-2">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/headphones_product.png" alt="Stackly Sound Pods" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Headphones</span>
+                <h3 class="product-title">Stackly Sound Pods</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span class="product-rating-count">(54)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$149.00</span>
+                  <button class="product-add-btn" id="arr-add-2" onclick="window.location.href='404.html';" aria-label="Add Stackly Sound Pods to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 (Laptops) -->
+          <div class="product-card glass arrival-item" data-category="laptops" id="prod-arr-3">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/laptop_product.png" alt="Stackly Book Pro 14" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Laptops</span>
+                <h3 class="product-title">Stackly Book Pro 14</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span class="product-rating-count">(82)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$1299.00</span>
+                  <button class="product-add-btn" id="arr-add-3" onclick="window.location.href='404.html';" aria-label="Add Stackly Book Pro 14 to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 (Watches) -->
+          <div class="product-card glass arrival-item" data-category="watches" id="prod-arr-4">
+            <div class="product-badge">
+              <span class="tag-hot">New</span>
+            </div>
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/smartwatch_product.png" alt="Stackly Aura Fit" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Watches</span>
+                <h3 class="product-title">Stackly Aura Fit</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span class="product-rating-count">(47)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$199.00</span>
+                  <button class="product-add-btn" id="arr-add-4" onclick="window.location.href='404.html';" aria-label="Add Stackly Aura Fit to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 (Home Appliances) -->
+          <div class="product-card glass arrival-item" data-category="appliances" id="prod-arr-5">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/appliance_product.png" alt="Stackly air purifier" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Appliances</span>
+                <h3 class="product-title">Stackly Purify Air</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(212)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$249.00</span>
+                  <button class="product-add-btn" id="arr-add-5" onclick="window.location.href='404.html';" aria-label="Add Stackly Purify Air to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 (Laptops - Dynamic 2) -->
+          <div class="product-card glass arrival-item" data-category="laptops" id="prod-arr-6">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/laptop_product.png" alt="Stackly Quantum Book 16" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Laptops</span>
+                <h3 class="product-title">Stackly Quantum Book 16</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(118)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$1899.00</span>
+                  <button class="product-add-btn" id="arr-add-6" onclick="window.location.href='404.html';" aria-label="Add Stackly Quantum Book 16 to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 (Mobiles - Dynamic 2) -->
+          <div class="product-card glass arrival-item" data-category="mobiles" id="prod-arr-7">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/hero_product.png" alt="Stackly Nova Pro" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Mobiles</span>
+                <h3 class="product-title">Stackly Nova Pro</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(104)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$1099.00</span>
+                  <button class="product-add-btn" id="arr-add-7" onclick="window.location.href='404.html';" aria-label="Add Stackly Nova Pro to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 (Headphones - Dynamic 2) -->
+          <div class="product-card glass arrival-item" data-category="headphones" id="prod-arr-8">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/headphones_product.png" alt="Stackly H-1 Audio" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Headphones</span>
+                <h3 class="product-title">Stackly H-1 Audio</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span class="product-rating-count">(82)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$179.00</span>
+                  <button class="product-add-btn" id="arr-add-8" onclick="window.location.href='404.html';" aria-label="Add Stackly H-1 Audio to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9 (Laptops) -->
+          <div class="product-card glass arrival-item" data-category="laptops" id="prod-arr-9">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/laptop_product.png" alt="Stackly Book Air" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Laptops</span>
+                <h3 class="product-title">Stackly Book Air</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span class="product-rating-count">(68)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$999.00</span>
+                  <button class="product-add-btn" id="arr-add-9" onclick="window.location.href='404.html';" aria-label="Add Stackly Book Air to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 (Mobiles) -->
+          <div class="product-card glass arrival-item" data-category="mobiles" id="prod-arr-10">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/hero_product.png" alt="Stackly Nova Flip" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Mobiles</span>
+                <h3 class="product-title">Stackly Nova Flip</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(73)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$899.00</span>
+                  <button class="product-add-btn" id="arr-add-10" onclick="window.location.href='404.html';" aria-label="Add Stackly Nova Flip to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 (Watches) -->
+          <div class="product-card glass arrival-item" data-category="watches" id="prod-arr-11">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/smartwatch_product.png" alt="Stackly Chrono Sport" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Watches</span>
+                <h3 class="product-title">Stackly Chrono Sport</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span class="product-rating-count">(51)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$349.00</span>
+                  <button class="product-add-btn" id="arr-add-11" onclick="window.location.href='404.html';" aria-label="Add Stackly Chrono Sport to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 (Home Appliances) -->
+          <div class="product-card glass arrival-item" data-category="appliances" id="prod-arr-12">
+            <div class="product-actions">
+              <button class="product-action-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action-btn" aria-label="Compare product"><i class="fa-solid fa-code-compare"></i></button>
+            </div>
+            <div class="product-img-wrapper">
+              <img src="assets/images/appliance_product.png" alt="Stackly Smart Kettle" class="product-img">
+            </div>
+            <div class="product-info">
+              <div>
+                <span class="product-category">Appliances</span>
+                <h3 class="product-title">Stackly Smart Kettle</h3>
+              </div>
+              <div>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="product-rating-count">(142)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">$89.00</span>
+                  <button class="product-add-btn" id="arr-add-12" onclick="window.location.href='404.html';" aria-label="Add Stackly Smart Kettle to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: TESTIMONIALS -->
+    <section class="testimonials" id="section-testimonials" style="border-top: 1px solid var(--border-color);">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">User <span>Feedback</span></h2>
+            <p class="section-subtitle">Real testimonials from verified global adopters of our technological hardware.</p>
+          </div>
+          <div class="testimonial-nav">
+            <button class="testimonial-nav-btn" id="testi-prev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="testimonial-nav-btn" id="testi-next" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="testimonials-slider-container">
+          <div class="testimonials-track" id="testimonials-track">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card glass" id="testi-card-1">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">"The Stackly Chrono watch exceeded all my performance criteria. The latency and synchronic connection to my workspace is incredibly smooth. The aesthetics look absolutely stunning."</p>
+              <div class="testimonial-user">
+                <div class="testimonial-avatar">
+                  <img src="https://i.pravatar.cc/100?img=33" alt="User Alex Chen">
+                </div>
+                <div class="testimonial-user-info">
+                  <h4>Alex Chen</h4>
+                  <p>Quantum Engineer, NexusLabs</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card glass" id="testi-card-2">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Audio fidelity on the H-1 is unmatched. I hear details in my acoustic renders that my previous high-end studios could not replicate. An absolute masterclass in headphones design."</p>
+              <div class="testimonial-user">
+                <div class="testimonial-avatar">
+                  <img src="https://i.pravatar.cc/100?img=12" alt="User Sarah Croft">
+                </div>
+                <div class="testimonial-user-info">
+                  <h4>Sarah Jenkins</h4>
+                  <p>Lead Sound Designer, Veloce</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card glass" id="testi-card-3">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="testimonial-text">"Integrating the Sphere Hub transformed my automation framework. The ambient temperature adjustment and spatial sensory synchronization work effortlessly. Stackly is the standard."</p>
+              <div class="testimonial-user">
+                <div class="testimonial-avatar">
+                  <img src="https://i.pravatar.cc/100?img=60" alt="User Marcus Vance">
+                </div>
+                <div class="testimonial-user-info">
+                  <h4>Marcus Vance</h4>
+                  <p>Smart Architect, OrbitGroup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: NEWSLETTER SIGNUP -->
+    <section class="newsletter" id="section-newsletter" style="border-top: 1px solid var(--border-color);">
+      <div class="section-container">
+        <div class="newsletter-card glass-premium">
+          <div class="newsletter-card-glow"></div>
+          <h2 class="newsletter-title">Stay Synchronized with the <span>Future</span></h2>
+          <p class="newsletter-subtitle">Subscribe to our newsletter and receive priority access to limited hardware releases, development cycles, and exclusive discounts.</p>
+          <form class="newsletter-form" id="newsletter-form-container" onsubmit="event.preventDefault(); window.location.href='404.html';">
+            <input type="email" placeholder="Enter security-key (Email)..." class="newsletter-input" id="newsletter-email" required>
+            <button type="submit" class="newsletter-btn" id="newsletter-submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: BENEFITS BANNER (USPs) -->
+    <section class="benefits" id="section-benefits">
+      <div class="section-container benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card" id="benefit-1">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="benefit-info">
+            <h4>Global Dispatch</h4>
+            <p>Priority delivery within 48 hours.</p>
+          </div>
+        </div>
+        <!-- Benefit 2 -->
+        <div class="benefit-card" id="benefit-2">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="benefit-info">
+            <h4>Secure Protocol</h4>
+            <p>End-to-end encrypted checkout.</p>
+          </div>
+        </div>
+        <!-- Benefit 3 -->
+        <div class="benefit-card" id="benefit-3">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div class="benefit-info">
+            <h4>Return Channel</h4>
+            <p>30-day effortless return guarantee.</p>
+          </div>
+        </div>
+        <!-- Benefit 4 -->
+        <div class="benefit-card" id="benefit-4">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="benefit-info">
+            <h4>Direct Support</h4>
+            <p>24/7 technical chat assist.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-logo-area">
+          <div class="footer-logo">
+            <img src="assets/images/stackly_logo.png" class="stackly-logo" alt="Stackly Logo">
+          </div>
+          <p class="footer-desc">Providing premium sensory-enhancing hardware and futuristic devices for refined tech environments.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-link" aria-label="Stackly on Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Stackly on Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="404.html" class="social-link" aria-label="Stackly on Github"><i class="fa-brands fa-github"></i></a>
+            <a href="404.html" class="social-link" aria-label="Stackly on Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <div class="footer-links">
+            <a href="index.html#section-categories">Smart Gear</a>
+            <a href="index.html#section-categories">Acoustics</a>
+            <a href="index.html#section-categories">Wearables</a>
+            <a href="index.html#section-categories">Automation</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <div class="footer-links">
+            <a href="404.html">About Us</a>
+            <a href="404.html">Services</a>
+            <a href="404.html">Contact Hub</a>
+            <a href="404.html">Security Protocol</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Assistance</h5>
+          <div class="footer-links">
+            <a href="404.html">Support Hub</a>
+            <a href="404.html">Hardware Return</a>
+            <a href="404.html">Latency Sync</a>
+            <a href="404.html">FAQ Gateway</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY Inc. All rights reserved. Designed for the futuristic tech space.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Protocol</a>
+          <a href="404.html">Terms of Access</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Main Logic Script -->
+  <script src="js/app.js"></script>
+  </div>
+
+</body>
+</html>
